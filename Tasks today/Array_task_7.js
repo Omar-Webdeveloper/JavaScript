@@ -1,0 +1,11 @@
+var array= [1,3,4,6,8,9,10];
+array.shift();
+array.shift();
+array.shift();
+array.shift();
+array.shift();
+array.pop();
+array.push(-7);
+array.push(3.5);
+array.unshift(5);
+console.log(array);
