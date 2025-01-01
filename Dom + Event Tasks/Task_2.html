@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+    <form action="">
+        <!-- <select id="font style" onchange="list1()">
+            <option value="Times New Roman" selected="selected"> Times New Roman </option> 
+        <option value="Arial">Arial</option> 
+        <option value="fantasy">Fantasy</option> 
+        <option value="cursive">cursive</option>
+          </select> -->
+          <select id="fontStyle" onchange="list1()">
+             <option value="Times New Roman" selected="selected">Times New Roman</option> 
+             <option value="Arial">Arial</option> 
+             <option value="fantasy">Fantasy</option> 
+             <option value="cursive">Cursive</option>
+             </select>
+
+          <!-- <select id="fontSize " onchange="list2()">
+            <option value="8px">8px</option>
+            <option value="10px">10px</option>
+            <option value="14px">14px</option>
+            <option value="20px">20px</option>
+            <option value="24px">24px</option>
+          </select> -->
+          <select id="fontSize" onchange="list2()"> 
+            <option value="8px">8px</option> 
+            <option value="10px">10px</option> 
+            <option value="14px">14px</option> 
+            <option value="20px">20px</option> 
+            <option value="24px">24px</option> 
+        </select><br>
+          <!-- <input type="checkbox" id="Italic" onclick="italicc()">
+          <label for="Italic"> Italic</label><br> -->
+          <input type="checkbox" id="Italic" onclick="italic()"> <label for="Italic">Italic</label>
+
+          <input type="checkbox" id="Bold" onclick="boldd()">
+          <label for="Bold">Bold</label><br>
+
+          <input type="checkbox" id="Underlinnenee" onclick="Underlinee()">
+          <label for="Underlinnenee"> Underline </label><br>
+
+        <textarea name="Text" id="Text" cols="30" rows="10">
+this is the message that iwnt to be delivered
+        </textarea>
+    </form>
+    <script>
+function list1() {
+    var selectBox = document.getElementById("fontStyle");
+     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+      var text = document.getElementById("Text"); text.style.fontFamily = selectedValue;
+}
+function list2()
+ { var selectBox = document.getElementById("fontSize");
+  var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+   var text = document.getElementById("Text"); text.style.fontSize = selectedValue;
+ }
+
+// function italicc(){
+//     var checkBox1 = document.getElementById("Italic");
+//     var text = document.getElementById("Text");
+//     if (checkBox1.checked == true){
+//     text.style.fontstyle = "italic";
+//   } else {
+//      text.style.fontstyle = "normal";}
+
+// }
+function italic() { 
+    var checkBox = document.getElementById("Italic");
+     var text = document.getElementById("Text");
+      if (checkBox.checked) 
+      { text.style.fontStyle = "italic"; }
+       else { text.style.fontStyle = "normal"; }
+    }
+
+function boldd(){
+    var checkBox = document.getElementById("Bold");
+    var text = document.getElementById("Text");
+
+    if (checkBox.checked == true){
+    text.style.fontWeight  = "bold";
+  } else {
+     text.style.fontWeight = "normal";}
+
+
+}
+
+function Underlinee(){
+    var checkBox2 = document.getElementById("Underlinnenee");
+    var text = document.getElementById("Text");
+    if (checkBox2.checked == true){
+    text.style.textDecoration = "underline";
+  } else {
+     text.style.textDecoration = "none";}
+
+ 
+  }
+
+    </script>
+</body>
+</html>
